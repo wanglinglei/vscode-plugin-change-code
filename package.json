@@ -6,10 +6,24 @@
   "engines": {
     "vscode": "^1.82.0"
   },
+  "publisher": "wanglinglei",
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "repository": {
+    "url": "https://github.com/wanglinglei/vscode-plugin-change-code.git",
+    "type": "vscode plugin"
+  },
+  "keywords": ["javascript","typescript"],
+  "license": "SEE LICENSE IN LICENSE",
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact",
+    "onLanguage:vue",
+    "onLanguage:vue-html"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "menus": {

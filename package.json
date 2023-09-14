@@ -12,16 +12,62 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "changeCodeGroup",
+          "group": "A_Code_Group@001"
+        }
+      ],
+      "changeCodeGroup":[
+        {
+          "command": "changeCodeGroup_hump",
+          "group": "A_Code_Group@010"
+        },
+        {
+          "command": "changeCodeGroup_underLine",
+          "group": "A_Code_Group@020"
+        },
+        {
+          "command": "changeCodeGroup_strike",
+          "group": "A_Code_Group@030"
+        },
+        {
+          "command": "changeCodeGroup_constants",
+          "group": "A_Code_Group@040"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "fast-change-code.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "changeCodeGroup_hump",
+        "title": "小驼峰",
+        "category": "changeCodeGroup"
+      },
+      {
+        "command": "changeCodeGroup_underLine",
+        "category": "changeCodeGroup",
+        "title": "下划线"
+      },
+      {
+        "command": "changeCodeGroup_strike",
+        "title": "中划线",
+        "category": "changeCodeGroup"
+      },
+      {
+        "command": "changeCodeGroup_constants",
+        "title": "大写常量",
+        "category": "changeCodeGroup"
       }
     ],
     "submenus": [
       {
-        "id": " ",
-        "label": ""
+        "id": "changeCodeGroup",
+        "label": "格式转换"
       }
     ]
   },
